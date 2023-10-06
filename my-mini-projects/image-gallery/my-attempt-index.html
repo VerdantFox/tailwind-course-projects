@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <div class="bg-sky-100 min-h-screen flex justify-center">
+      <div
+        class="bg-white my-8 mx-8 rounded-2xl p-32 max-md:p-10 max-lg:p-16 w-screen"
+      >
+        <!-- Nav -->
+        <nav class="flex gap-6 justify-end mb-28">
+          <a
+            class="pb-2 border-b border-transparent hover:border-neutral-600 duration-300"
+            href="#"
+            >Vector</a
+          >
+          <a
+            class="pb-2 border-b border-transparent hover:border-neutral-600 duration-300"
+            href="#"
+            >Illustrations</a
+          >
+          <a
+            class="pb-2 border-b border-transparent hover:border-neutral-600 duration-300"
+            href="#"
+            >Images</a
+          >
+          <a
+            class="pb-2 border-b border-transparent hover:border-neutral-600 duration-300"
+            href="#"
+            >Icons</a
+          >
+        </nav>
+
+        <!-- row 2 -->
+        <div class="flex place-content-between mb-10 gap-5 max-md:flex-col">
+          <!-- Search bar -->
+          <div
+            class="flex items-center justify-between border-b border-b-neutral-300 pb-3 group"
+          >
+            <input
+              id="search"
+              type="text"
+              placeholder="Search"
+              class="focus:outline-none"
+            />
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="ionicon text-neutral-300 h-8"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                />
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                  d="M338.29 338.29L448 448"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Upload button -->
+          <button class="bg-black text-white px-16 py-4 rounded-md">
+            Upload
+          </button>
+        </div>
+
+        <!-- Gallery -->
+        <section class="grid grid-cols-3 gap-3 max-md:grid-cols-2">
+          <img src="./images/image1.jpg" alt="" />
+          <img src="./images/image2.jpg" alt="" />
+          <img src="./images/image3.jpg" alt="" />
+          <img src="./images/image4.jpg" alt="" />
+          <img src="./images/image5.jpg" alt="" />
+          <img src="./images/image6.jpg" alt="" />
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
