@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Product Modal</title>
+  </head>
+  <body>
+    <!-- Global container -->
+    <div class="flex justify-center items-center h-screen bg-neutral-50">
+      <!-- Inner container -->
+      <div
+        class="flex max-md:flex-col gap-16 bg-white rounded-2xl p-16 shadow-2xl"
+      >
+        <!-- Col 1 -->
+        <div class="flex justify-center">
+          <img
+            class="max-h-52 object-contain h-auto hover:scale-105 duration-200"
+            src="../../all-project-assets/product-modal/images/headphone.png"
+            alt="Pink headphones with cat ears"
+          />
+        </div>
+        <!-- Col 2 -->
+        <div>
+          <p
+            class="inline-block bg-black text-white py-1 px-4 rounded-full mb-4"
+          >
+            Free shipping
+          </p>
+          <h3 class="text-2xl font-normal mb-8">
+            Razen Kraken Kitty Edt Gaming Headset Quartz
+          </h3>
+          <p class="line-through mb-4">$799</p>
+          <p class="text-5xl font-bold mb-3">$599</p>
+          <p class="text-neutral-400 text-sm mb-6">
+            The offer is valid until April 3 or as long as stock lasts!
+          </p>
+          <div
+            class="transition-all duration-150 group bg-blue-700 rounded-lg pb-2 hover:p-0 mb-5"
+          >
+            <button
+              class="transition-all duration-150 rounded-lg w-full block bg-blue-500 text-white py-4 group-hover:mb-2 group-hover:py-5"
+            >
+              Add to cart
+            </button>
+          </div>
+          <div class="flex justify-left gap-3 items-center group mb-4">
+            <div
+              class="inline-block h-1 w-1 p-1.5 bg-green-300 rounded-full group-hover:animate-ping duration"
+            ></div>
+            <p class="text-sm">50+ pcs. in stock.</p>
+          </div>
+          <div class="flex gap-4 items-center">
+            <button
+              class="rounded-lg border border-2 border-neutral-200 py-4 px-8 hover:-translate-y-1 duration-200 hover:shadow-md"
+            >
+              <img
+                src="../../all-project-assets/product-modal/images/weight.png"
+                alt=""
+                class="inline-block h-6 -translate-y-0.5"
+              />
+              Add to cart
+            </button>
+            <button
+              class="rounded-lg border border-2 border-neutral-200 py-4 px-8 hover:-translate-y-1 duration-200 hover:shadow-md"
+            >
+              <img
+                src="../../all-project-assets/product-modal/images/heart.png"
+                alt=""
+                class="inline-block h-6 -translate-y-0.5"
+              />
+              Add to wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
