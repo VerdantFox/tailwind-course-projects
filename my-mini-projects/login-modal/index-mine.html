@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        fontFamily: {
+          sans: ["Mulish", "sans-serif"],
+          mono: ["Rokkitt", "monospace"],
+        },
+        theme: {
+          extend: {
+            boxShadow: {
+              blue: "0 0 0 8px rgba(3, 219, 252,0.06)",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Login Modal</title>
+  </head>
+  <body class="bg-pink-50">
+    <!-- Global -->
+    <div class="h-screen flex items-center justify-center">
+      <!-- Inner square -->
+      <div class="bg-white mx-16 rounded-xl flex justify-between shadow-xl">
+        <!-- Inner col 1 -->
+        <div class="p-16 flex flex-col max-w-lg">
+          <h2 class="font-bold text-2xl mb-8">Log In</h2>
+          <p class="text-neutral-600 mb-12">
+            Log in to your account to upload or download pictures, videos or
+            music.
+          </p>
+          <input
+            type="email"
+            class="px-4 py-6 border border-neutral-300 rounded focus:outline-none focus:shadow-blue mb-6"
+            placeholder="Enter your email address"
+          />
+
+          <!-- row -->
+          <div class="flex justify-between items-center mb-10">
+            <a href="#" class="text-teal-600">Forgot password?</a>
+            <button
+              class="px-10 py-6 bg-teal-800 text-white rounded-lg flex gap-4 border-2 border-teal-800 hover:bg-white hover:text-teal-800 duration-200"
+            >
+              <span>Next</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="ionicon w-6 inline-block"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="48"
+                  d="M268 112l144 144-144 144M392 256H100"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="border-b mb-8"></div>
+          <p class="text-center text-sm text-neutral-400 mb-8">
+            Or log in with
+          </p>
+
+          <!-- socials row -->
+          <div class="flex gap-4 items-center justify-space-between">
+            <button
+              class="w-1/2 py-3 border rounded text-lg flex items-center justify-center gap-4 hover:-translate-y-1 duration-200 hover:shadow-md"
+            >
+              <img src="images/facebook.png" alt="" class="h-10 inline-block" />
+              <span>Facebook</span>
+            </button>
+            <button
+              class="w-1/2 py-3 border rounded text-lg flex items-center justify-center gap-4 hover:-translate-y-1 duration-200 hover:shadow-md"
+            >
+              <img src="images/google.png" alt="" class="h-10 inline-block" />
+              <span>Google</span>
+            </button>
+          </div>
+        </div>
+        <!-- Col 2 -->
+        <img
+          src="images/image.jpg"
+          alt="water"
+          class="max-w-sm max-md:hidden"
+        />
+      </div>
+    </div>
+  </body>
+</html>
