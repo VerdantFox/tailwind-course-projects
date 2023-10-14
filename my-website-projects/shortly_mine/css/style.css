@@ -511,6 +511,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .nav-link {
+  width: 100%;
+  text-align: center;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -518,14 +520,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .nav-link:hover {
-  --tw-bg-opacity: 1;
-  background-color: hsl(260 8% 14% / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(180 66% 49% / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
   .nav-link {
     --tw-text-opacity: 1;
     color: hsl(257 7% 63% / var(--tw-text-opacity));
+  }
+
+  .nav-link:hover {
+    --tw-text-opacity: 1;
+    color: hsl(260 8% 14% / var(--tw-text-opacity));
   }
 }
 
@@ -569,6 +576,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .top-16 {
   top: 4rem;
+}
+
+.left-10 {
+  left: 2.5rem;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
 }
 
 .top-0 {
@@ -931,6 +946,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -945,6 +965,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-7 {
   line-height: 1.75rem;
 }
@@ -957,6 +981,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-red {
+  --tw-text-opacity: 1;
+  color: hsl(0 87% 67% / var(--tw-text-opacity));
 }
 
 .text-darkViolet {
@@ -989,36 +1018,44 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* Hamburger Menu */
 
 .hamburger {
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  transition: all 0.25s;
   position: relative;
+  height: 1.25rem;
+  width: 1.75rem;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
-.hamburger-top,
-.hamburger-middle,
-.hamburger-bottom {
+.hamburger-top, .hamburger-middle, .hamburger-bottom {
   position: absolute;
-  width: 24px;
-  height: 2px;
-  top: 0;
-  left: 0;
-  background: hsl(257, 27%, 26%);
-  transform: rotate(0);
-  transition: all 0.5s;
+  top: 0px;
+  left: 0px;
+  height: 0.15rem;
+  width: 1.75rem;
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: hsl(257 27% 26% / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
 .hamburger-middle {
-  transform: translateY(7px);
+  --tw-translate-y: 0.44rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hamburger-bottom {
-  transform: translateY(14px);
+  --tw-translate-y: 0.88rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .open .hamburger-top {
-  transform: rotate(45deg) translateY(6px) translateX(6px);
+  --tw-translate-y: 0.5rem;
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .open .hamburger-middle {
@@ -1026,7 +1063,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .open .hamburger-bottom {
-  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  --tw-translate-y: 0.5rem;
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .placeholder\:text-yellow-500::-moz-placeholder {
@@ -1141,6 +1180,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:w-0 {
+    width: 0px;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:grid-cols-2 {
