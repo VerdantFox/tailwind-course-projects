@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply focus:outline-none focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-400;
+  }
+}
