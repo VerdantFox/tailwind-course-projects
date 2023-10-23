@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-600/90;
+  }
+}
+
+@layer components {
+  .feature-menu-button {
+    @apply py-4 text-gray-500 border-b-4 border-transparent;
+  }
+}
+
+.hamburger {
+  @apply cursor-pointer w-7 h-5 relative transition-all duration-200;
+}
+
+.hamburger-line {
+  @apply absolute w-7 h-[0.15rem] top-0 left-0  rotate-0 transition-all duration-500;
+}
+
+.hamburger-middle {
+  @apply translate-y-[0.44rem];
+}
+
+.hamburger-bottom {
+  @apply translate-y-[0.88rem];
+}
+
+.open .hamburger-top {
+  @apply rotate-45 translate-y-2;
+}
+
+.open .hamburger-middle {
+  @apply hidden;
+}
+
+.open .hamburger-bottom {
+  @apply -rotate-45 translate-y-2;
+}
+
+#menu {
+  transition: transform 0s 0.5s, background-color 0.5s 0s, color 0.5s 0s;
+}
+#menu.loading {
+  transition: background-color 0.5s 0s, color 0.5s 0s;
+}
+
+.selected-feature {
+  @apply border-orange-600;
+}
